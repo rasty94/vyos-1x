@@ -52,7 +52,7 @@ def getLogger(name=None, **kwargs):
 	if name in _created:
 		if len(kwargs) == 0:
 			return _created[name]
-		raise ValueError('a logger with the name "{name} already exists')
+		raise ValueError(f'a logger with the name "{name}" already exists')
 
 	logger = logging.getLogger(name)
 	logger.setLevel(_levels[kwargs.get('level', 'DEBUG')])
