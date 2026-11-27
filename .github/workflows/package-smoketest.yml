@@ -142,7 +142,7 @@ jobs:
           path: build/vyos-1x
           repository: ${{ github.repository }}
           token: ${{ needs.set_config.outputs.use_pat == 'true' && secrets.PAT || secrets.GITHUB_TOKEN }}
-          ref: ${{ needs.set_config.outputs.branch }}
+          ref: rolling  # smoke test branch: build-vyos-image checks out 'rolling' here
           persist-credentials: false
 
       - name: Clone vyos-1x source code
