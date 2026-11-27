@@ -84,7 +84,7 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.config.outputs.use_pat == 'true' && secrets.PAT || secrets.GITHUB_TOKEN }}
         run: |
-          BRANCH="${{ steps.config.outputs.branch }}"
+          BRANCH="rolling"  # smoke test branch: build against vyos-build rolling
           VYOS_BUILD_REPO="${{ steps.config.outputs.vyos_build_repo }}"
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
