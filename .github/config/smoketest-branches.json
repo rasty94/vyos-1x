@@ -85,7 +85,7 @@
       ],
       "build_version_format": "%Y.%m.%d-%H%M-integration",
       "install_build_deps": false,
-      "mirror_enabled": true
+      "mirror_enabled": false
     }
   }
 }
