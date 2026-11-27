@@ -5,7 +5,9 @@
       "container_image": "vyos/vyos-build:rolling",
       "vyos_build_repo": "vyos/vyos-build",
       "use_pat": false,
-      "build_runner": ["ubuntu-26.04"],
+      "build_runner": [
+        "ubuntu-26.04"
+      ],
       "build_version_format": "%Y.%m.%d-%H%M-integration",
       "install_build_deps": false,
       "mirror_enabled": true
@@ -15,11 +17,22 @@
       "container_image": "vyos/vyos-build:scutum",
       "vyos_build_repo": "VyOS-Networks/vyos-build",
       "use_pat": true,
-      "build_runner": ["self-hosted", "azure"],
-      "test_runners": { "vpp": ["self-hosted", "vpp"] },
+      "build_runner": [
+        "self-hosted",
+        "azure"
+      ],
+      "test_runners": {
+        "vpp": [
+          "self-hosted",
+          "vpp"
+        ]
+      },
       "build_version_format": "1.6-integration-%Y%m%d%H%M",
       "install_build_deps": true,
-      "smoketests_runner": ["self-hosted", "smoketests"],
+      "smoketests_runner": [
+        "self-hosted",
+        "smoketests"
+      ],
       "mirror_enabled": false
     },
     "circinus": {
@@ -27,11 +40,22 @@
       "container_image": "vyos/vyos-build:circinus",
       "vyos_build_repo": "VyOS-Networks/vyos-build",
       "use_pat": true,
-      "build_runner": ["self-hosted", "azure"],
-      "test_runners": { "vpp": ["self-hosted", "vpp"] },
+      "build_runner": [
+        "self-hosted",
+        "azure"
+      ],
+      "test_runners": {
+        "vpp": [
+          "self-hosted",
+          "vpp"
+        ]
+      },
       "build_version_format": "1.5-integration-%Y%m%d%H%M",
       "install_build_deps": true,
-      "smoketests_runner": ["self-hosted", "smoketests"],
+      "smoketests_runner": [
+        "self-hosted",
+        "smoketests"
+      ],
       "mirror_enabled": false
     },
     "sagitta": {
@@ -39,11 +63,29 @@
       "container_image": "vyos/vyos-build:sagitta",
       "vyos_build_repo": "VyOS-Networks/vyos-build",
       "use_pat": true,
-      "build_runner": ["self-hosted", "azure"],
-      "smoketests_runner": ["self-hosted", "smoketests"],
+      "build_runner": [
+        "self-hosted",
+        "azure"
+      ],
+      "smoketests_runner": [
+        "self-hosted",
+        "smoketests"
+      ],
       "build_version_format": "1.4-integration-%Y%m%d%H%M",
       "install_build_deps": true,
       "mirror_enabled": false
+    },
+    "smoke-2026-11-27": {
+      "vyos_mirror": "https://packages.vyos.net/repositories/rolling/",
+      "container_image": "vyos/vyos-build:rolling",
+      "vyos_build_repo": "vyos/vyos-build",
+      "use_pat": false,
+      "build_runner": [
+        "ubuntu-26.04"
+      ],
+      "build_version_format": "%Y.%m.%d-%H%M-integration",
+      "install_build_deps": false,
+      "mirror_enabled": true
     }
   }
 }
